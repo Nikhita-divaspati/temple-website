@@ -1,0 +1,579 @@
+/* style.css - Traditional South Indian (Virupaksha) theme */
+
+:root{
+  --saffron: #f2a622;
+  --maroon: #7a1f1f;
+  --temple-bg: #fff8f0;
+  --dark: #2b1b17;
+  --accent: #c98b2b;
+}
+
+/* Basic resets */
+*{box-sizing:border-box}
+body{margin:0;font-family: 'Noto Serif', Georgia, serif;background:var(--temple-bg);color:var(--dark);line-height:1.5}
+
+/* Header */
+.header-top{
+  display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:linear-gradient(90deg,var(--saffron),var(--accent));
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.logo{height:64px;border-radius:6px;object-fit:cover}
+.header-center{flex:1;text-align:center}
+.address-bar{display:inline-block;background:var(--maroon);color:#fff;padding:8px 12px;border-radius:4px;font-weight:700;letter-spacing:1px}
+.name-bar{margin-top:8px;font-size:20px;color:var(--maroon);font-weight:800}
+
+/* Header right */
+.header-right{display:flex;align-items:center;gap:12px}
+.donate-btn{background:var(--maroon);color:#fff;border:none;padding:10px 14px;border-radius:6px;font-weight:700;cursor:pointer}
+.social.wa{width:36px;height:36px}
+
+/* NAV */
+.main-nav{background:#fff;border-top:6px solid var(--maroon)}
+.main-nav ul{list-style:none;display:flex;justify-content:center;gap:36px;margin:0;padding:12px 0}
+.main-nav a{color:var(--dark);text-decoration:none;font-weight:700}
+.main-nav a:hover{color:var(--maroon);}
+
+/* HERO */
+.hero{padding:36px 18px}
+.hero-inner{display:flex;gap:20px;align-items:center;justify-content:center;max-width:1200px;margin:0 auto}
+.hero-left{flex:1;padding:12px}
+.hero-left h1{font-size:44px;margin:0;color:var(--maroon);letter-spacing:1px}
+.hero-left h2{font-size:22px;margin:8px 0;color:#4a2b2b}
+.hero-left p{max-width:520px}
+.hero-cta .btn{display:inline-block;padding:10px 16px;border-radius:6px;text-decoration:none;margin-right:10px}
+.btn-primary{background:var(--maroon);color:#ffffff}
+.btn-outline{background:transparent;border:2px solid var(--maroon);color:var(--maroon)}
+.hero-right{flex:1;text-align:center}
+.hero-img{width:420px;height:300px;object-fit:cover;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}
+
+/* POOJA TIMINGS */
+.pooja-timings{padding:32px 18px;background:#fff;margin-top:18px}
+.timings-grid{display:flex;gap:18px;max-width:1000px;margin:18px auto;justify-content:center}
+.timing-card{background:linear-gradient(180deg,#fff8f5,#fff);padding:18px;border-radius:8px;min-width:160px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.06)}
+.timing-card h3{margin:0;color:var(--maroon)}
+
+/* ABOUT BLURB */
+.about-blurb{display:flex;gap:20px;padding:32px 18px;align-items:center}
+.about-left{flex:1}
+.about-right{flex:1;text-align:center}
+.about-img{width:380px;height:220px;object-fit:cover;border-radius:8px}
+
+/* GALLERY PREVIEW */
+.gallery-preview{padding:28px 18px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1100px;margin:12px auto}
+.gallery-grid img{width:100%;height:180px;object-fit:cover;border-radius:10px;border:6px solid #fff;box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+
+
+/* ABOUT PAGE NEW STYLE - Option A (Icon Block Cards) */
+
+.about-page {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 36px;
+  color: var(--maroon);
+  margin-bottom: 20px;
+}
+
+.about-intro {
+  font-size: 17px;
+  color: #4a2b2b;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.about-card {
+  background: #fff;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-left: 6px solid var(--saffron);
+  text-align: left;
+}
+
+.about-card .icon {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.about-card h2 {
+  margin: 5px 0;
+  color: var(--maroon);
+  font-size: 22px;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #4a2b2b;
+  line-height: 1.7;
+}
+
+
+/* ------------------ Gallery Slider (Two Row Version) ------------------ */
+
+.slider-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 50%; /* 2 images per slide */
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.10);
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--maroon);
+  cursor: pointer;
+  padding: 6px 14px;
+  background: #faf9f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.20);
+  z-index: 9;
+}
+
+.arrow:hover {
+  background: #f2dec0;
+}
+
+.arrow-left {
+  left: 5px;
+}
+
+.arrow-right {
+  right: 5px;
+}
+
+
+
+/* CONTACT PAGE */
+.contact-page{padding:28px}
+.contact-grid{display:flex;gap:20px;max-width:1100px;margin:0 auto}
+.contact-details{flex:1}
+.contact-map img{width:420px;height:260px;object-fit:cover;border-radius:8px}
+
+/* FOOTER */
+.site-footer{background:var(--maroon);color:#fff;padding:26px 18px;margin-top:28px}
+.footer-top{display:flex;gap:16px;align-items:flex-start;max-width:1100px;margin:0 auto}
+.footer-top h3{color:var(--saffron);margin:0}
+.callback-form{display:flex;flex-direction:column;gap:8px;margin-left:auto}
+.callback-form input,.callback-form textarea{padding:10px;border-radius:6px;border:none}
+.callback-form button{background:var(--saffron);border:none;padding:10px;border-radius:6px;font-weight:700;cursor:pointer}
+.footer-bottom{text-align:center;margin-top:12px;opacity:0.95}
+
+/* modal */
+.modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);align-items:center;justify-content:center}
+.modal-content{background:#fff;padding:24px;border-radius:10px;max-width:420px;position:relative;text-align:center}
+.close{position:absolute;right:12px;top:8px;background:transparent;border:none;font-size:26px;cursor:pointer}
+.qr-img{width:220px;height:220px;object-fit:contain;margin:8px 0}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{flex-direction:column}
+  .timings-grid{flex-direction:column}
+}
+@media (max-width:480px){
+  .main-nav ul{flex-wrap:wrap;gap:12px}
+  .hero-img{width:100%;height:auto}
+  .gallery-grid{grid-template-columns:1fr}
+}
+/* LOCATION SECTION */
+.location-section {
+    padding: 28px 18px;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 32px;
+    color: var(--maroon);
+    margin-bottom: 16px;
+}
+
+.location-box {
+    max-width: 1000px;
+    margin: 0 auto 16px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.center .btn {
+    background: var(--maroon);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* READ MORE STYLES */
+.more-text {
+  display: none;
+  margin-top: 10px;
+  color: #4a2b2b;
+  line-height: 1.6;
+}
+
+.read-btn {
+  margin-top: 12px;
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.read-btn:hover {
+  background: #5e1616;
+}
+/* Small images inside About Read More section */
+.more-text img {
+  width: 120px;
+  height: 90px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 2px solid #fff;
+}
+/* ---------------- HOW TO REACH SECTION ---------------- */
+
+.reach-section {
+  padding: 40px 20px;
+  background: #fff;
+  margin-top: 40px;
+}
+
+.reach-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: var(--maroon);
+  margin-bottom: 25px;
+}
+
+.reach-box {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.reach-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fff8f0;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border-left: 6px solid var(--saffron);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.reach-item .icon {
+  font-size: 38px;
+  min-width: 50px;
+}
+
+.reach-item h3 {
+  margin: 0;
+  color: var(--maroon);
+  font-size: 20px;
+}
+
+.reach-item p {
+  margin-top: 6px;
+  line-height: 1.6;
+  color: #4a2b2b;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reach-item {
+    flex-direction: column;
+    text-align: left;
+  }
+  .reach-item .icon {
+    margin-bottom: 8px;
+  }
+}
+/* ---- BOOK POOJA EXPAND SECTION ---- */
+/* SEVA SECTION - Clean List Style */
+.seva-section {
+  padding: 30px 18px;
+}
+
+.seva-title {
+  font-size: 30px;
+  color: var(--maroon);
+  margin-bottom: 20px;
+}
+
+.seva-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seva-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ecd9c8;
+}
+
+.seva-row h3 {
+  margin: 0;
+  color: var(--maroon);
+}
+
+.seva-row p {
+  margin: 5px 0 0;
+  color: #4a2b2b;
+}
+
+.seva-book-btn {
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.seva-book-btn:hover {
+  background: #5e1616;
+}
+.seva-list-section {
+    margin-bottom: 50px;  /* space below pooja block */
+    padding-bottom: 30px;
+    border-bottom: none
+}
+#about-section {
+    padding-top: 40px;
+}
+.about-white-block {
+  background: #ffffff;
+  padding: 40px 0;
+  margin-top: 20px;
+}
+/* BOOK POOJA POPUP */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Pay Button */
+.pay-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--maroon);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #5c1515;
+}
+
+#closePooja {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+/* Temple Highlights */
+.highlights-section {
+  padding: 60px 0;
+  background:#FFF8F0;
+  color: #0c0c0c;
+  text-align: center;
+}
+
+.highlights-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #0c0c0c;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 90%;
+  margin: auto;
+}
+
+.highlight-box {
+  background: #fffefe;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.highlight-box:hover {
+  transform: translateY(-5px);
+  border-color: #f4c542;
+}
+
+.highlight-box h3 {
+  margin-bottom: 10px;
+  color: #f4c542;
+}
+/* Temple Timeline */
+.timeline-section {
+  padding: 60px 0;
+  background: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #b8860b;
+}
+
+.timeline {
+  width: 80%;
+  margin: auto;
+  border-left: 3px solid #b8860b;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #b8860b;
+  border-radius: 50%;
+  position: absolute;
+  left: -42px;
+  top: 5px;
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  font-size: 20px;
+  color: #b8860b;
+}
+
+.timeline-item p {
+  margin: 5px 0 0;
+}
+/* FAQ Section */
+.faq-section {
+  padding: 60px 0;
+  background: #FFF8F0;
+  color: #fff;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #f4c542;
+}
+
+.faq-item {
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  background: #222;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #f4c542;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-item p {
+  margin-top: 10px;
+  display: none; /* hidden by default */
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.faq-item.active p {
+  display: block;
+}

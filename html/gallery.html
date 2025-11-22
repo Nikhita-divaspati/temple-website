@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Virupaksha Temple</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="gallery-page">
+  <h1>Gallery</h1>
+
+  <!-- ROW 1 SLIDER -->
+  <div class="slider-container">
+    <div class="arrow arrow-left" data-slider="1">&#10094;</div>
+
+    <div class="slider-track" id="sliderTrack1">
+      <div class="slide"><img src="../asset/img/img_1.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_2.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_3.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_4.jpg" /></div>
+    </div>
+
+    <div class="arrow arrow-right" data-slider="1">&#10095;</div>
+  </div>
+
+
+  <!-- ROW 2 SLIDER -->
+  <div class="slider-container">
+    <div class="arrow arrow-left" data-slider="2">&#10094;</div>
+
+    <div class="slider-track" id="sliderTrack2">
+      <div class="slide"><img src="../asset/img/img_5.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_6.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_7.jpg" /></div>
+      <div class="slide"><img src="../asset/img/img_8.jpg" /></div>
+    </div>
+
+    <div class="arrow arrow-right" data-slider="2">&#10095;</div>
+  </div>
+
+</section>
+
+<div id="footer"></div>
+
+<script>
+  fetch("../header.html").then(r=>r.text()).then(t=>document.getElementById("header").innerHTML=t);
+  fetch("../footer.html").then(r=>r.text()).then(t=>document.getElementById("footer").innerHTML=t);
+</script>
+<script src="../js/script.js"></script>
+
+
+<script src="../js/gallery.js"></script>
+
+</body>
+</html>
